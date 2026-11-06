@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stage | Jessie James</title>
+<meta name="description" content="Stage view">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://jessiejamesmusic.co.uk/stage/">
+<meta name="theme-color" content="#09080d">
+<meta property="og:site_name" content="Jessie James">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stage | Jessie James">
+<meta property="og:description" content="Stage view">
+<meta property="og:url" content="https://jessiejamesmusic.co.uk/stage/">
+<meta property="og:image" content="https://jessiejamesmusic.co.uk/assets/img/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/alfa-slab-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/style.css?v=4">
+</head>
+<body>
+<main class="app" id="main">
+  <div class="app-head"><span class="brand">Stage view<span>.</span></span><button class="btn btn-ghost btn-sm" id="signout" hidden>Sign out</button></div>
+
+  <form class="card" id="login" hidden>
+    <h2>Sign in</h2>
+    <p class="small muted">Enter the stage password. This phone will remember it.</p>
+    <div class="field"><label for="l-pw">Password</label><input id="l-pw" type="password" autocomplete="current-password" required></div>
+    <p class="small" id="l-err" style="color:#ff9db0" hidden></p>
+    <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+  </form>
+
+  <div id="panel" hidden>
+    <div class="tabs" role="tablist" aria-label="Stage sections">
+      <button role="tab" id="tab-tonight" aria-controls="p-tonight" aria-selected="true">Tonight</button>
+      <button role="tab" id="tab-gigs" aria-controls="p-gigs" aria-selected="false">Gigs</button>
+      <button role="tab" id="tab-songs" aria-controls="p-songs" aria-selected="false">Set list</button>
+    </div>
+
+    <!-- Tonight -->
+    <section id="p-tonight" class="stage-pane" role="tabpanel" aria-labelledby="tab-tonight">
+      <div class="row-card">
+        <span><b>Requests</b><br><span class="small muted" id="openlbl">Closed</span></span>
+        <button class="switch" id="toggle" role="switch" aria-checked="false" aria-label="Requests open"></button>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong id="s-total">0</strong><span>Requests</span></div>
+        <div class="stat"><strong id="s-songs">0</strong><span>Songs</span></div>
+        <div class="stat"><strong id="s-off">0</strong><span>Off-list</span></div>
+      </div>
+      <div class="app-section">
+        <div class="app-head"><h2>Most wanted</h2><span class="small muted" id="synced"></span></div>
+        <div class="list" id="queue"><p class="item empty-row">No requests yet.</p></div>
+      </div>
+      <details class="card">
+        <summary>Start a new gig</summary>
+        <form id="night">
+          <div class="field"><label for="n-venue">Venue</label><input id="n-venue" placeholder="The Swan, Stoke" required></div>
+          <div class="field"><label for="n-when">Label</label><input id="n-when" placeholder="Sat 7 Nov"></div>
+          <button class="btn btn-primary btn-block" type="submit">Start gig and open requests</button>
+          <p class="small muted">Clears the last gig's requests and opens requests for fans.</p>
+        </form>
+      </details>
+    </section>
+
+    <!-- Gigs -->
+    <section id="p-gigs" class="stage-pane" role="tabpanel" aria-labelledby="tab-gigs" hidden>
+      <form class="card" id="gig-form">
+        <h2>Add a gig</h2>
+        <div class="fields">
+          <div class="field"><label for="g-date">Date</label><input id="g-date" type="date" required></div>
+          <div class="field"><label for="g-time">Start time</label><input id="g-time" type="time"></div>
+        </div>
+        <div class="field"><label for="g-venue">Venue</label><input id="g-venue" maxlength="80" required></div>
+        <div class="field"><label for="g-town">Town</label><input id="g-town" maxlength="60"></div>
+        <div class="field"><label for="g-act">Act</label><select id="g-act"><option value="solo">Jessie solo</option><option value="band">Jessie &amp; the Revolvers</option></select></div>
+        <div class="field"><label for="g-url">Ticket link (optional)</label><input id="g-url" type="url" placeholder="https://"></div>
+        <button class="btn btn-primary btn-block" type="submit">Add gig</button>
+      </form>
+      <div class="app-section">
+        <h2>Coming up</h2>
+        <div class="list" id="gig-list"></div>
+        <p class="small muted">Gigs show on the website straight away. Past gigs hide themselves.</p>
+      </div>
+    </section>
+
+    <!-- Set list -->
+    <section id="p-songs" class="stage-pane" role="tabpanel" aria-labelledby="tab-songs" hidden>
+      <form class="card" id="song-form">
+        <h2>Add a song</h2>
+        <div class="field"><label for="sg-title">Song</label><input id="sg-title" maxlength="120" required></div>
+        <div class="field"><label for="sg-artist">Artist</label><input id="sg-artist" maxlength="120"></div>
+        <label class="check"><input id="sg-orig" type="checkbox"> One of Jessie's originals</label>
+        <button class="btn btn-primary btn-block" type="submit">Add song</button>
+      </form>
+      <div class="app-section">
+        <div class="app-head"><h2>Set list</h2><span class="small muted" id="song-count"></span></div>
+        <input id="song-search" type="search" placeholder="Search the set list" aria-label="Search the set list">
+        <div class="list" id="song-list"></div>
+        <p class="small muted">Fans see these on the request page. Tap the star to mark an original. Originals show first.</p>
+      </div>
+    </section>
+  </div>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script type="module" src="../assets/js/stage.js?v=4"></script>
+</body>
+</html>

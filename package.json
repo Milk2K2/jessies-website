@@ -1,0 +1,8 @@
+{
+  "name": "jessie-james-site",
+  "private": true,
+  "description": "Jessie James website: static pages on Netlify, song requests and editable gigs via Netlify Functions + Blobs",
+  "dependencies": {
+    "@netlify/blobs": "10.7.13"
+  }
+}

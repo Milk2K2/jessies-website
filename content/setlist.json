@@ -1,0 +1,15 @@
+{
+  "_help": "Songs fans can request. original: true marks Jessie's own songs (shown first, highlighted).",
+  "songs": [
+    { "title": "Original Song One", "artist": "Jessie & the Revolvers", "original": true },
+    { "title": "Original Song Two", "artist": "Jessie & the Revolvers", "original": true },
+    { "title": "Valerie", "artist": "Amy Winehouse" },
+    { "title": "Jolene", "artist": "Dolly Parton" },
+    { "title": "Dreams", "artist": "Fleetwood Mac" },
+    { "title": "Mr. Brightside", "artist": "The Killers" },
+    { "title": "Rolling in the Deep", "artist": "Adele" },
+    { "title": "Zombie", "artist": "The Cranberries" },
+    { "title": "Back to Black", "artist": "Amy Winehouse" },
+    { "title": "Don't Look Back in Anger", "artist": "Oasis" }
+  ]
+}

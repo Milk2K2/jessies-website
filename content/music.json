@@ -1,0 +1,20 @@
+{
+  "_help": "Jessie & the Revolvers originals. The first release is the featured one. Leave a link empty to hide that button. Artwork goes in assets/img.",
+  "releases": [
+    {
+      "title": "Single Title",
+      "type": "Single",
+      "year": 2026,
+      "blurb": "One line about the song.",
+      "artwork": "assets/img/single.jpg",
+      "links": { "spotify": "", "apple": "", "youtube": "", "bandcamp": "" }
+    },
+    { "title": "Song Title", "type": "Single", "year": 2025, "links": { "spotify": "" } },
+    { "title": "Song Title", "type": "EP track", "year": 2025, "links": { "spotify": "" } }
+  ],
+  "videos": [
+    { "title": "Valerie", "note": "Live", "url": "", "thumb": "" },
+    { "title": "Original Song", "note": "Official video", "url": "", "thumb": "" },
+    { "title": "Dreams", "note": "Live", "url": "", "thumb": "" }
+  ]
+}

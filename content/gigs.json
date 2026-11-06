@@ -1,0 +1,9 @@
+{
+  "_help": "Add gigs here. act is 'solo' or 'band'. date is YYYY-MM-DD. Past gigs hide themselves automatically. ticketUrl is optional.",
+  "gigs": [
+    { "date": "2026-11-07", "time": "21:00", "act": "solo", "venue": "The Swan", "town": "Stoke-on-Trent", "ticketUrl": "" },
+    { "date": "2026-11-14", "time": "21:00", "act": "band", "venue": "Example Venue", "town": "Newcastle-under-Lyme", "ticketUrl": "" },
+    { "date": "2026-11-28", "time": "20:30", "act": "band", "venue": "Example Venue", "town": "Hanley", "ticketUrl": "" },
+    { "date": "2026-12-05", "time": "21:00", "act": "solo", "venue": "Example Pub", "town": "Stone", "ticketUrl": "" }
+  ]
+}

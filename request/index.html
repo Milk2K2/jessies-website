@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Request a Song | Jessie James</title>
+<meta name="description" content="At a Jessie James gig? Request a song from tonight's set list.">
+<link rel="canonical" href="https://jessiejamesmusic.co.uk/request/">
+<meta name="theme-color" content="#09080d">
+<meta property="og:site_name" content="Jessie James">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Request a Song | Jessie James">
+<meta property="og:description" content="At a Jessie James gig? Request a song from tonight's set list.">
+<meta property="og:url" content="https://jessiejamesmusic.co.uk/request/">
+<meta property="og:image" content="https://jessiejamesmusic.co.uk/assets/img/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/alfa-slab-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/style.css?v=4">
+</head>
+<body>
+<main class="app" id="main">
+  <div class="app-head"><a class="brand" href="../">Jessie James<span>.</span></a><a class="btn btn-ghost btn-sm" href="../band/">Her music</a></div>
+
+  <div class="ticket">
+    <span class="eyebrow" id="g-when">Jessie James live</span>
+    <h1>Request a song</h1>
+    <span class="ticket-venue" id="g-venue">&nbsp;</span>
+    <div class="ticket-stub"><span class="live off" id="g-status"><span class="dot"></span><span>Checking&hellip;</span></span><span>Admit one</span></div>
+  </div>
+
+  <div class="notice" id="closed" hidden>Requests open while Jessie's playing. Scan the code again at the gig, or <a href="../#gigs">see upcoming gigs</a>.</div>
+
+  <div id="open" hidden>
+    <div class="app-section">
+      <h2>Tonight's set list</h2>
+      <p class="small muted">Tap a song and it pops up on Jessie's screen on stage.</p>
+      <label class="sr-only" for="search">Search songs</label>
+      <input id="search" type="search" placeholder="Search songs" autocomplete="off">
+      <div class="list" id="songs"></div>
+    </div>
+
+    <div class="app-section" style="margin-top:22px">
+      <h2>Something else?</h2>
+      <form id="custom">
+        <div class="field"><label for="c-song">Song and artist</label><input id="c-song" maxlength="120" required></div>
+        <div class="field"><label for="c-name">Your name (optional)</label><input id="c-name" maxlength="40" autocomplete="given-name"></div>
+        <div class="field"><label for="c-msg">Dedication (optional)</label><textarea id="c-msg" rows="2" maxlength="200"></textarea></div>
+        <button class="btn btn-primary btn-block" type="submit">Send request</button>
+      </form>
+    </div>
+  </div>
+
+  <a class="row-card" id="tipbox" target="_blank" rel="noopener" hidden><span><b>Enjoying the set?</b><br><span class="small muted">Tip Jessie, every bit helps</span></span><span class="arrow">&rarr;</span></a>
+  <a class="row-card" href="../band/"><span><span class="eyebrow">Like what you heard?</span><b>Stream Jessie &amp; the Revolvers</b></span><span class="arrow">&rarr;</span></a>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script type="module" src="../assets/js/request.js?v=4"></script>
+</body>
+</html>
