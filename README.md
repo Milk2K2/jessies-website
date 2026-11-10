@@ -12,6 +12,7 @@ Photos are tinted violet to match (the `duo` class). Take `duo` off the photo's 
 - `/band/` Jessie & The Revolvers: player, singles, proof, live dates, mailing list
 - `/epk/` press kit for promoters and press (copyable bio, highlights, releases)
 - `/links/` one page of links. Put this in the Instagram and Facebook bios instead of a Linktree, so every click lands on her own site
+- `/merch/` merch shop. Shows "on the way" plus a mailing list signup until there's a product, then it and its menu link appear
 - `/request/` what the QR code opens (also `/r`)
 - `/stage/` Jessie's private page, behind a password and hidden from Google
 - `/thanks/` shown after the booking or mailing list forms
@@ -62,3 +63,19 @@ Free on Netlify's free plan at this size. Forms are unlimited. The API is tiny: 
 
 ## Sources for the copy (check with Jessie before launch)
 Bio facts come from the band's Spotify profile, BabyStep Magazine's January 2026 feature and the Music Awards of Staffordshire & Cheshire results. The wording is a draft for her to approve.
+
+## Tips with Apple Pay
+The site doesn't take payments itself (no card details ever touch it). Tips go through a Stripe payment link, which takes cards, Apple Pay and Google Pay.
+1. Jessie opens a Stripe account at stripe.com (her name, her bank account, so the money goes straight to her).
+2. In Stripe: Payment Links > New > "Customers choose what to pay". Call it "Tip Jessie & The Revolvers" and copy the link.
+3. Paste it into `TIP_URL` in `assets/js/config.js`. A tip button then shows on the request page and the links page.
+
+## Merch
+Each product is a Stripe payment link too, so there's no monthly shop fee.
+1. In Stripe: Payment Links > New > "Products or subscriptions". Add the product, price and a photo. Turn on "Collect customers' addresses" and add a shipping rate. For sizes, add a custom dropdown field called Size.
+2. Add the product to `content/merch.json` (there's an example in the file) with that link as `buyUrl`, and put a square photo in `assets/img/merch/`.
+3. Orders arrive by email from Stripe with the address and size. When something runs out, set `soldOut` to true.
+If she ends up with lots of products or needs stock counts, that's the point to move the shop to something like Big Cartel and link it from here.
+
+## Photos
+Supplied by Jessie. Before launch, check each photographer is happy for them to be used and whether they want a credit (it can go in the footer).

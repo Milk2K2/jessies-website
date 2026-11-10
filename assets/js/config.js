@@ -1,4 +1,4 @@
 // Site settings. Edit these, then push to GitHub.
 export const SITE_URL = "https://jessiejamesmusic.co.uk";
 export const BOOKING_EMAIL = "bookings@jessiejamesmusic.co.uk";
-export const TIP_URL = ""; // e.g. a Monzo.me, PayPal.me or Ko-fi link. Leave empty to hide the tip button.
+export const TIP_URL = ""; // Tips. Paste a Stripe payment link here (set up as "customers choose what to pay") and it takes cards, Apple Pay and Google Pay. Leave empty to hide the tip buttons.

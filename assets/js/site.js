@@ -1,4 +1,4 @@
-import { BOOKING_EMAIL, SITE_URL } from "./config.js";
+import { BOOKING_EMAIL, SITE_URL, TIP_URL } from "./config.js";
 
 const root = new URL("../../", import.meta.url).href; // site root, wherever this page lives
 const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -170,7 +170,29 @@ async function band() {
   if (stages) stages.innerHTML = (d.stages || []).map(esc).join("<br>");
 }
 
+/* ---------- merch ---------- */
+async function merch() {
+  const links = $$("[data-merch-link]"), grid = document.querySelector("[data-merch]");
+  if (!links.length && !grid) return;
+  const d = await load("merch.json"), items = d.items || [];
+  if (items.length) links.forEach(a => { a.hidden = false; });
+  if (!grid) return;
+  if (!items.length) { grid.remove(); document.querySelector("[data-merch-empty]").hidden = false; return; }
+  grid.innerHTML = items.map(m => {
+    const ok = /^https:\/\//.test(m.buyUrl || "") && !m.soldOut;
+    return `<article class="product${m.soldOut ? " sold" : ""}">
+      <div class="product-img">${m.image ? `<img src="${esc(root + m.image)}" alt="${esc(m.name)}" loading="lazy">` : ""}</div>
+      <h3 class="product-name">${esc(m.name)}</h3>
+      ${m.detail ? `<p class="muted">${esc(m.detail)}</p>` : ""}
+      <div class="product-buy"><span class="product-price">${esc(m.price || "")}</span>${ok ? `<a class="btn btn-primary" href="${esc(m.buyUrl)}" target="_blank" rel="noopener">Buy</a>` : `<span class="btn btn-ghost" aria-disabled="true">${m.soldOut ? "Sold out" : "Coming soon"}</span>`}</div>
+    </article>`;
+  }).join("");
+  const note = document.querySelector("[data-merch-note]");
+  if (d.note) { note.textContent = d.note; note.hidden = false; }
+}
+
 /* ---------- small things ---------- */
+$$("[data-tip]").forEach(a => { if (/^https:\/\//.test(TIP_URL || "")) { a.href = TIP_URL; a.hidden = false; } });
 // photos are optional too: if a file isn't there (or failed before this script ran), drop its box
 function dropMissing(t) { const box = t.closest("[data-media]") || t; const hero = t.closest(".hero"); box.remove(); hero?.classList.add("no-media"); }
 $$("img[data-optional-img]").forEach(i => { if (i.complete && !i.naturalWidth) dropMissing(i); });
@@ -184,3 +206,4 @@ $$("[data-copy]").forEach(b => b.addEventListener("click", async () => {
 gigs().catch(console.error);
 music().catch(console.error);
 band().catch(console.error);
+merch().catch(console.error);

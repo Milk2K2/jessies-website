@@ -18,7 +18,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/league-gothic-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/alfa-slab-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=6">
+<link rel="stylesheet" href="assets/css/style.css?v=8">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jessie James","jobTitle":"Singer-songwriter","url":"https://jessiejamesmusic.co.uk/","homeLocation":{"@type":"City","name":"Stoke-on-Trent"},"memberOf":{"@type":"MusicGroup","name":"Jessie & The Revolvers","url":"https://jessiejamesmusic.co.uk/band/"},"sameAs":["https://open.spotify.com/artist/59uv0WRVPtHEDUnuRjHcPp","https://www.instagram.com/jessieandtherevolvers/","https://www.facebook.com/profile.php?id=61571918052116"]}</script>
 </head>
 <body>
@@ -29,7 +29,8 @@
     <nav class="main-nav" aria-label="Main">
       <a class="nav-link" href="./" aria-current="page"><span class="nav-long">Jessie James</span><span class="nav-short">Jessie</span></a>
       <a class="nav-link" href="band/"><span class="nav-long">Jessie &amp; The Revolvers</span><span class="nav-short">The Band</span></a>
-      <a class="nav-link" href="request/"><span class="nav-long">Request a song</span><span class="nav-short">Request</span></a>
+      <a class="nav-link" href="merch/" data-merch-link hidden>Merch</a>
+      <a class="nav-link nav-request" href="request/"><span class="nav-long">Request a song</span><span class="nav-short">Request</span></a>
     </nav>
     <a class="btn btn-primary btn-sm" href="#book">Book</a>
   </div>
@@ -43,7 +44,7 @@
         <p class="lede">Writes the songs and fronts Jessie &amp; The Revolvers. Plays solo in pubs and venues across Staffordshire.</p>
         <div class="actions"><a class="btn btn-primary" href="band/#music">Hear the music</a><a class="btn btn-ghost" href="#gigs">See gigs</a><a class="btn btn-ghost" href="#book">Book Jessie</a></div>
       </div>
-      <div class="hero-media duo" data-media><img data-optional-img src="assets/img/jessie.jpg" alt="Jessie James singing live" width="800" height="1000" fetchpriority="high"></div>
+      <div class="hero-media" data-media><img data-optional-img src="assets/img/jessie.jpg" alt="Jessie James, portrait in a field at dusk" width="800" height="1000" fetchpriority="high"></div>
     </div>
   </section>
   <a class="showbar" href="#gigs" data-next-wrap hidden><div class="wrap"><span class="showbar-k">Next show</span><b data-next-gig="all" data-next-href="tickets"></b><span class="showbar-go" data-next-go>See dates</span></div></a>
@@ -54,12 +55,21 @@
 
   <section class="section" id="about" aria-labelledby="about-h">
     <div class="wrap split">
-      <h2 id="about-h">Songs first</h2>
+      <div class="about-left"><h2 id="about-h">Songs first</h2>
+        <div class="photo-box" data-media><img class="photo" data-optional-img src="assets/img/jessie-horse.jpg" alt="Jessie James sitting on a horse under a pale sky" width="1400" height="1050" loading="lazy"></div></div>
       <div class="prose">
         <p><strong>Jessie James is a singer-songwriter from Stoke-on-Trent.</strong> She's been singing since she was about eight and taught herself guitar and piano along the way.</p>
         <p>She writes and fronts Jessie &amp; The Revolvers, named Best Young Act at the 2026 Music Awards of Staffordshire &amp; Cheshire. On her own she plays solo sets around Staffordshire: her songs, and the ones a room wants to sing back.</p>
         <p><a href="band/">Meet the band</a></p>
       </div>
+    </div>
+  </section>
+
+  <section class="section flush-top" aria-label="Photos">
+    <div class="wrap strip">
+      <img data-optional-img src="assets/img/strip-1.jpg" alt="Jessie singing live under blue stage lights with her red guitar" width="800" height="1000" loading="lazy">
+      <img data-optional-img src="assets/img/strip-2.jpg" alt="Jessie James in a barn, looking off to one side" width="800" height="1000" loading="lazy">
+      <img data-optional-img src="assets/img/strip-3.jpg" alt="The band on stage seen from the back of the crowd" width="800" height="1000" loading="lazy">
     </div>
   </section>
 
@@ -129,12 +139,13 @@
       <a href="https://www.facebook.com/profile.php?id=61571918052116" rel="noopener">Facebook</a>
     </nav>
     <nav class="foot-links" aria-label="More">
+      <a href="merch/" data-merch-link hidden>Merch</a>
       <a href="epk/">Press kit</a>
       <a href="links/">All links</a>
     </nav>
     <span>Site by <a href="https://humancreation.co.uk">Human Creation</a></span>
   </div>
 </footer>
-<script type="module" src="assets/js/site.js?v=6"></script>
+<script type="module" src="assets/js/site.js?v=8"></script>
 </body>
 </html>

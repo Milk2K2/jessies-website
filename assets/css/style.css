@@ -388,3 +388,33 @@ details.card[open] summary::after{content:"–"}
   .hero.no-media .poster br{display:none}
   .hero.no-media .poster small{display:inline-block;font-size:.3em;margin:0 0 0 .3em;vertical-align:.5em}
 }
+
+/* ---------- photos ---------- */
+.hero-media{overflow:visible;background:none}
+.hero-media img{border-radius:var(--radius);box-shadow:16px 16px 0 var(--violet)}
+.about-left{display:flex;flex-direction:column;gap:clamp(24px,3vw,36px)}
+.photo-tall{aspect-ratio:4/5}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.6vw,20px)}
+.strip-4{grid-template-columns:repeat(4,1fr)}
+.strip img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius)}
+.strip a{display:block;border-radius:var(--radius);overflow:hidden}
+.strip a img{transition:transform .3s}
+.strip a:hover img{transform:scale(1.03)}
+.bleed img{width:100%;height:clamp(240px,44vw,620px);object-fit:cover}
+@media (max-width:900px){.hero-media img{box-shadow:10px 10px 0 var(--violet);width:calc(100% - 10px)}.strip-4{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.strip:not(.strip-4){grid-template-columns:1fr 1fr}.strip:not(.strip-4) img:last-child{display:none}}
+
+/* ---------- merch ---------- */
+.merch{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,48px) clamp(16px,2.4vw,32px)}
+.product{display:flex;flex-direction:column;gap:10px;min-width:0}
+.product-img{aspect-ratio:1;border-radius:var(--radius);overflow:hidden;background:var(--ink-2);margin-bottom:6px}
+.product-img img{width:100%;height:100%;object-fit:cover}
+.product-name{font:400 clamp(22px,2.4vw,28px)/1.1 var(--slab);text-transform:none;letter-spacing:0}
+.product-buy{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:8px}
+.product-price{font:400 44px/1 var(--poster)}
+.product.sold .product-img{opacity:.45}
+.product .btn[aria-disabled]{cursor:default;opacity:.7}
+.merch-empty{display:flex;flex-direction:column;gap:18px;max-width:560px}
+@media (max-width:900px){.merch{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.merch{grid-template-columns:1fr}}
+@media (max-width:680px){.site-header .wrap:has([data-merch-link]:not([hidden])) .nav-request{display:none}}

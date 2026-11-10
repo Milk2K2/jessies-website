@@ -18,7 +18,7 @@
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
 <link rel="preload" href="../assets/fonts/league-gothic-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/alfa-slab-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/css/style.css?v=6">
+<link rel="stylesheet" href="../assets/css/style.css?v=8">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -28,7 +28,8 @@
     <nav class="main-nav" aria-label="Main">
       <a class="nav-link" href="../"><span class="nav-long">Jessie James</span><span class="nav-short">Jessie</span></a>
       <a class="nav-link" href="../band/"><span class="nav-long">Jessie &amp; The Revolvers</span><span class="nav-short">The Band</span></a>
-      <a class="nav-link" href="../request/"><span class="nav-long">Request a song</span><span class="nav-short">Request</span></a>
+      <a class="nav-link" href="../merch/" data-merch-link hidden>Merch</a>
+      <a class="nav-link nav-request" href="../request/"><span class="nav-long">Request a song</span><span class="nav-short">Request</span></a>
     </nav>
     <a class="btn btn-primary btn-sm" href="../band/#book">Book the band</a>
   </div>
@@ -82,8 +83,20 @@
         <div>
           <h3>Links</h3>
           <div class="actions"><a class="btn btn-ghost btn-sm" href="https://open.spotify.com/artist/59uv0WRVPtHEDUnuRjHcPp" target="_blank" rel="noopener">Spotify</a><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/jessieandtherevolvers/" target="_blank" rel="noopener">Instagram</a><a class="btn btn-ghost btn-sm" href="https://www.facebook.com/profile.php?id=61571918052116" target="_blank" rel="noopener">Facebook</a></div>
-          <p class="small muted">Hi-res photos, logos and a tech spec on request through the <a href="../band/#book">booking form</a>.</p>
+          <p class="small muted">Logos and a tech spec on request through the <a href="../band/#book">booking form</a>.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section flush-top" aria-labelledby="photos-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="photos-h">Press photos</h2><p class="muted">Select a photo to open the full-size file.</p></div>
+      <div class="strip strip-4">
+        <a href="../assets/img/press/jessie-james-portrait.jpg" download data-media><img data-optional-img src="../assets/img/press/jessie-james-portrait.jpg" alt="Jessie James, portrait in a field" loading="lazy"></a>
+        <a href="../assets/img/press/jessie-and-the-revolvers-live-1.jpg" download data-media><img data-optional-img src="../assets/img/press/jessie-and-the-revolvers-live-1.jpg" alt="Jessie singing live under blue lights" loading="lazy"></a>
+        <a href="../assets/img/press/jessie-james-barn.jpg" download data-media><img data-optional-img src="../assets/img/press/jessie-james-barn.jpg" alt="Jessie James in a barn" loading="lazy"></a>
+        <a href="../assets/img/press/jessie-and-the-revolvers-live-2.jpg" download data-media><img data-optional-img src="../assets/img/press/jessie-and-the-revolvers-live-2.jpg" alt="Jessie &amp; The Revolvers live, black and white" loading="lazy"></a>
       </div>
     </div>
   </section>
@@ -97,12 +110,13 @@
       <a href="https://www.facebook.com/profile.php?id=61571918052116" rel="noopener">Facebook</a>
     </nav>
     <nav class="foot-links" aria-label="More">
+      <a href="../merch/" data-merch-link hidden>Merch</a>
       <a href="../epk/">Press kit</a>
       <a href="../links/">All links</a>
     </nav>
     <span>Site by <a href="https://humancreation.co.uk">Human Creation</a></span>
   </div>
 </footer>
-<script type="module" src="../assets/js/site.js?v=6"></script>
+<script type="module" src="../assets/js/site.js?v=8"></script>
 </body>
 </html>

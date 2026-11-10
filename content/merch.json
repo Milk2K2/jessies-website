@@ -1,0 +1,5 @@
+{
+  "_help": "Merch for sale. Add one entry per product and the Merch page and its menu link appear on their own. price is text exactly as shown (\"£20\"). image is optional: a square photo saved in assets/img/merch/. buyUrl is that product's Stripe payment link (must start with https://). Set soldOut to true to grey it out. Example item: { \"name\": \"Better Off tee\", \"price\": \"£20\", \"detail\": \"Black, sizes S to XXL\", \"image\": \"assets/img/merch/better-off-tee.jpg\", \"buyUrl\": \"https://buy.stripe.com/...\", \"soldOut\": false }",
+  "note": "",
+  "items": []
+}
