@@ -1,33 +1,36 @@
 /* ==========================================================================
    Jessie James / Jessie & The Revolvers
-   A gig poster, not a template: tall wood-type headlines, a fat slab for names,
-   violet and black ink on bone paper, and marigold kept for tickets only.
+   A gig poster, not a template: the band's own hand-lettered logo, script headings
+   to match it, tall wood-type for titles, and three inks: cream, black, a little red.
    ========================================================================== */
 
 @font-face{font-family:"League Gothic";src:url("../fonts/league-gothic-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Alfa Slab One";src:url("../fonts/alfa-slab-one-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"La Belle Aurore";src:url("../fonts/la-belle-aurore-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"IBM Plex Sans";src:url("../fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"IBM Plex Sans";src:url("../fonts/ibm-plex-sans-latin-500-normal.woff2") format("woff2");font-weight:500;font-display:swap}
 @font-face{font-family:"IBM Plex Sans";src:url("../fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
 
 :root{
-  --ink:#0c0a10;
-  --ink-2:#15111c;
-  --bone:#f2eadb;
-  --violet:#7a2bff;
-  --violet-deep:#4a12b8;
-  --lilac:#cbb2ff;
-  --gold:#ffb627;      /* tickets and live things only */
-  --line:#2c2539;
-  --dim:#b3a9c2;
+  --ink:#0d0c0b;
+  --ink-2:#181614;
+  --bone:#f3ecdd;
+  --red:#d0201a;
+  --red-deep:#9c1512;
+  --violet:var(--red);        /* older name: the accent */
+  --violet-deep:var(--red-deep);
+  --lilac:#e9dfca;
+  --gold:var(--red);     /* older name: tickets and live things */
+  --line:#2e2a26;
+  --dim:#b5ada0;
 
   --poster:"League Gothic","Oswald","Arial Narrow",Impact,sans-serif;   /* headlines */
-  --slab:"Alfa Slab One",Rockwell,"Roboto Slab",Georgia,serif;          /* names of things */
+  --script:"La Belle Aurore","Segoe Script","Bradley Hand",cursive;      /* matches the logo lettering */
+  --slab:var(--poster);
   --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 
   /* older names, still used by the request and stage pages */
-  --bg:var(--ink);--bg-2:var(--ink-2);--surface:#1a1523;--fg:var(--bone);--muted:var(--dim);
-  --accent:var(--violet);--accent-deep:var(--violet-deep);--accent-soft:var(--lilac);--glow:rgba(122,43,255,.45);
+  --bg:var(--ink);--bg-2:var(--ink-2);--surface:#1d1a17;--fg:var(--bone);--muted:var(--dim);
+  --accent:var(--violet);--accent-deep:var(--violet-deep);--accent-soft:var(--lilac);--glow:rgba(208,32,26,.4);
   --display:var(--poster);--mono:var(--body);
 
   --radius:4px;
@@ -85,12 +88,12 @@ p{margin:0}
 /* ---------- grounds: the three inks ---------- */
 .on-violet{background:var(--violet);color:var(--bone)}
 .on-violet a:not(.btn){color:#fff}
-.on-violet .muted{color:#e6d9ff}
+.on-violet .muted{color:#f3ecdd}
 .on-violet .btn-primary{background:var(--bone);color:var(--ink)}
 .on-violet .btn-primary:hover{background:var(--ink);color:var(--bone)}
 .on-bone{background:var(--bone);color:var(--ink)}
 .on-bone a:not(.btn){color:var(--violet-deep)}
-.on-bone .muted{color:#4b4358}
+.on-bone .muted{color:#4a443d}
 .on-bone .btn-primary:hover{background:var(--ink);color:var(--bone)}
 
 /* ---------- header ---------- */
@@ -108,9 +111,9 @@ p{margin:0}
 /* ---------- hero: the poster ---------- */
 .hero{position:relative;overflow:hidden;isolation:isolate}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background-image:radial-gradient(circle,rgba(12,10,16,.34) 1.5px,transparent 1.7px);background-size:10px 10px;
+  background-image:radial-gradient(circle,rgba(208,32,26,.3) 1.5px,transparent 1.7px);background-size:10px 10px;
   -webkit-mask-image:linear-gradient(200deg,#000,transparent 55%);mask-image:linear-gradient(200deg,#000,transparent 55%)}
-.hero:not(.on-violet)::after{background-image:radial-gradient(circle,rgba(122,43,255,.5) 1.5px,transparent 1.7px)}
+.hero:not(.on-violet)::after{background-image:radial-gradient(circle,rgba(208,32,26,.55) 1.5px,transparent 1.7px)}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center;padding-top:clamp(40px,7vw,88px);padding-bottom:clamp(44px,7vw,96px)}
 .hero.no-media .wrap{grid-template-columns:1fr}
 .hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
@@ -207,7 +210,7 @@ p{margin:0}
 .gig-date strong{font:400 clamp(52px,6vw,76px)/.84 var(--poster);letter-spacing:0}
 .gig-info{min-width:0;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:16px clamp(16px,2.4vw,28px)}
 .gig-venue{font:400 clamp(22px,2.8vw,32px)/1.08 var(--slab)}
-.gig-meta{font-size:15px;color:#4b4358}
+.gig-meta{font-size:15px;color:#4a443d}
 .gig .btn{align-self:center;margin-right:clamp(14px,2vw,24px);background:var(--ink);color:var(--bone)}
 .gig .btn:hover{background:var(--violet);color:#fff}
 .empty{padding:22px 0;color:var(--dim);border-block:1px solid var(--line)}
@@ -245,16 +248,16 @@ p{margin:0}
 .field{display:flex;flex-direction:column;gap:6px}
 .field label{font-size:14px;font-weight:500;color:var(--dim)}
 .fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-input,select,textarea{width:100%;min-height:48px;padding:11px 14px;background:var(--ink);color:var(--bone);border:1px solid #453b57;border-radius:var(--radius);font:16px/1.4 var(--body);transition:border-color .15s}
+input,select,textarea{width:100%;min-height:48px;padding:11px 14px;background:var(--ink);color:var(--bone);border:1px solid #4a443d;border-radius:var(--radius);font:16px/1.4 var(--body);transition:border-color .15s}
 textarea{min-height:96px;resize:vertical}
-input::placeholder,textarea::placeholder{color:#7a7089}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--lilac);box-shadow:0 0 0 3px rgba(122,43,255,.35)}
+input::placeholder,textarea::placeholder{color:#857c70}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--lilac);box-shadow:0 0 0 3px rgba(208,32,26,.3)}
 form{display:flex;flex-direction:column;gap:14px;margin:0}
 .inline-form{flex-direction:row;flex-wrap:wrap}
 .inline-form input{flex:1 1 220px;width:auto}
 .on-violet input{background:var(--bone);color:var(--ink);border-color:var(--bone)}
-.on-violet input::placeholder{color:#6b6176}
-.on-violet input:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(12,10,16,.4)}
+.on-violet input::placeholder{color:#857c70}
+.on-violet input:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(13,12,11,.3)}
 .on-violet .inline-form .btn{background:var(--ink);color:var(--bone)}
 .on-violet .inline-form .btn:hover{background:var(--gold);color:var(--ink)}
 .hp{position:absolute;left:-9999px}
@@ -273,7 +276,7 @@ form{display:flex;flex-direction:column;gap:14px;margin:0}
 .video::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.85))}
 .video>*{position:relative;z-index:1}
 .video b{font:400 22px/1.1 var(--slab)}
-.video small{color:#e6d9ff;font-size:14px}
+.video small{color:#f3ecdd;font-size:14px}
 
 /* ---------- responsive ---------- */
 @media (max-width:900px){
@@ -342,7 +345,7 @@ form{display:flex;flex-direction:column;gap:14px;margin:0}
 .stat{padding:14px 8px;text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:12px}
 .stat strong{display:block;font:400 28px/1 var(--display);font-variant-numeric:tabular-nums}
 .stat span{display:block;margin-top:6px;font:500 10px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.switch{position:relative;width:56px;height:32px;flex:none;border-radius:999px;border:0;background:#453b57;cursor:pointer;transition:background .2s}
+.switch{position:relative;width:56px;height:32px;flex:none;border-radius:999px;border:0;background:#4a443d;cursor:pointer;transition:background .2s}
 .switch::after{content:"";position:absolute;top:4px;left:4px;width:24px;height:24px;border-radius:50%;background:#fff;transition:transform .2s}
 .switch[aria-checked="true"]{background:var(--accent)}
 .switch[aria-checked="true"]::after{transform:translateX(24px)}
@@ -418,3 +421,69 @@ details.card[open] summary::after{content:"–"}
 @media (max-width:900px){.merch{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.merch{grid-template-columns:1fr}}
 @media (max-width:680px){.site-header .wrap:has([data-merch-link]:not([hidden])) .nav-request{display:none}}
+
+
+/* ==========================================================================
+   v9: cream, black and a little red, with the band's logo and script headings
+   ========================================================================== */
+:focus-visible{outline-color:currentColor}
+::selection{background:var(--red);color:#fff}
+.skip{background:var(--red);color:#fff}
+
+/* script headings (thickened a touch so they sit nearer the logo's weight) */
+h2,.quote p,.script-name{font-family:var(--script);text-transform:none;letter-spacing:0;-webkit-text-stroke:.016em currentColor}
+h2{font-size:clamp(44px,6.2vw,80px);line-height:1.12;padding-top:.08em}
+.card h2{font-size:clamp(38px,4.2vw,52px)}
+.join h2{font-size:clamp(54px,8.4vw,112px);line-height:1.05}
+.request-banner h2{font-size:clamp(38px,5vw,62px)}
+.quote p{font-size:clamp(34px,4.6vw,60px);line-height:1.2}
+.quotes .quote p{font-size:clamp(28px,3vw,38px)}
+.script-name{font-size:clamp(76px,11.5vw,156px);line-height:.98;padding:.14em 0 .04em}
+.hero.no-media .script-name{font-size:clamp(76px,13.5vw,190px)}
+.feature-body h2,.app h2{font-family:var(--poster);text-transform:uppercase;letter-spacing:.012em;-webkit-text-stroke:0;padding-top:0}
+.feature-body h2{line-height:.84}
+
+/* names that used the slab now use the poster face */
+.brand{font:400 27px/1 var(--poster);text-transform:uppercase;letter-spacing:.05em}
+.gig-venue,.product-name,.video b{font-family:var(--poster);text-transform:uppercase;letter-spacing:.02em}
+.gig-venue{font-size:clamp(30px,3.6vw,42px);line-height:1}
+.product-name{font-size:clamp(28px,3vw,36px)}
+.prose em{font-family:inherit;font-size:inherit;font-style:italic;font-weight:600}
+.sleeve-artist{font:600 15px/1.2 var(--body)}
+
+/* the logo */
+.logo-h{margin:0;line-height:0}
+.logo-h img{width:100%;max-width:640px;height:auto}
+.logo-sm{width:clamp(180px,24vw,280px);height:auto}
+.hub-head img{width:100%;max-width:340px;height:auto}
+
+/* paper sections (the class is still called on-violet) */
+.on-violet{background:var(--bone);color:var(--ink)}
+.on-violet a:not(.btn){color:var(--red-deep)}
+.on-violet .muted{color:#4a443d}
+.on-violet .btn-primary{background:var(--ink);color:var(--bone)}
+.on-violet .btn-primary:hover{background:var(--red);color:#fff}
+.on-bone .btn-primary:hover{background:var(--ink);color:var(--bone)}
+.hero .subline,.hero:not(.on-violet) .subline{color:inherit}
+.on-violet input{background:#fffaf0;color:var(--ink);border-color:var(--ink)}
+.on-violet .inline-form .btn{background:var(--red);color:#fff}
+.on-violet .inline-form .btn:hover{background:var(--ink);color:var(--bone)}
+.card.on-violet{border-color:var(--bone)!important}
+
+/* red: only where something is live or wants pressing */
+.btn-primary{background:var(--red);color:#fff}
+.showbar{background:var(--red);color:#fff}
+.showbar:hover{background:#b81a15;color:#fff}
+.gig-date{background:var(--red);color:#fff;border-right-color:var(--bone)}
+.request-banner{background:var(--red);color:#fff}
+.request-banner .btn{background:var(--bone);color:var(--ink)}
+.request-banner .btn:hover{background:var(--ink);color:var(--bone)}
+.gig .btn:hover{background:var(--red);color:#fff}
+.sleeve:hover .sleeve-play{background:var(--red);color:#fff}
+.row-card.primary{background:var(--bone);border-color:var(--bone);color:var(--ink)}
+.row-card.primary .eyebrow,.row-card.primary .arrow{color:var(--red-deep)}
+.row-card.primary:hover{color:var(--ink)}
+.row-card.ticket-card{background:var(--red);border-color:var(--red);color:#fff}
+.row-card.ticket-card .eyebrow,.row-card.ticket-card .arrow,.row-card.ticket-card:hover{color:#fff}
+.hero-media img{box-shadow:16px 16px 0 var(--red)}
+@media (max-width:900px){.hero-media img{box-shadow:10px 10px 0 var(--red)}}

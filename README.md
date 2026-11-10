@@ -3,9 +3,9 @@
 Everything runs on Netlify: static pages, a small Netlify Function for the API, and Netlify Blobs for storage. There's no build step, nothing to sign up for besides Netlify and GitHub, and no external CDNs (the fonts are bundled in `assets/`).
 
 ## The look
-A gig poster: League Gothic for headlines, Alfa Slab One for names (the band, venues), IBM Plex Sans for reading. Three colours do the work: violet, black and bone. Marigold is kept for tickets and live things only, so it always means "there's a show". All of it is set at the top of `assets/css/style.css`.
+A gig poster built around the band's own logo (`assets/img/logo.svg` black, `logo-white.svg` cream). Three inks: cream, black, and a little red kept for things that are live or want pressing (tickets, next show, play, main buttons). Headings use a script (La Belle Aurore) chosen to sit near the logo's lettering; song titles, dates and venue names use League Gothic; reading text is IBM Plex Sans. All of it is set at the top of `assets/css/style.css`.
 
-Photos are tinted violet to match (the `duo` class). Take `duo` off the photo's box in the HTML if you'd rather show one in natural colour.
+The logo was traced from a phone screenshot. If you get the original file from whoever made it, export it as SVG and replace those two files. If you find out the exact font the logo uses, drop its .woff2 in `assets/fonts/` and change the `--script` line and its `@font-face` at the top of the stylesheet.
 
 ## Pages
 - `/` Jessie solo (home)
