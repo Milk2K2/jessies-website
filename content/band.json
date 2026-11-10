@@ -1,0 +1,16 @@
+{
+  "_help": "Proof points, press quotes and the line-up for Jessie & The Revolvers. Add to these as things happen and they show on the band page and press kit. The line-up only shows once there are two or more members listed.",
+  "highlights": [
+    { "title": "Best Young Act", "detail": "Music Awards of Staffordshire & Cheshire 2026", "url": "https://stoke.nub.news/news/local-news/local-musicians-recognised-at-the-music-awards-of-staffordshire-and-cheshire-286679" },
+    { "title": "Radio X", "detail": "Support from the Breakfast Show team", "url": "" },
+    { "title": "BBC Introducing", "detail": "Radio support", "url": "" },
+    { "title": "Make a Difference", "detail": "Played the BBC Stoke awards night", "url": "" }
+  ],
+  "quotes": [
+    { "text": "One of Stoke-on-Trent's most exciting emerging bands", "source": "BabyStep Magazine", "url": "https://www.babystepmagazine.com/single-post/introducing-jessie-the-revolvers" }
+  ],
+  "members": [
+    { "name": "Jessie James", "role": "Vocals" }
+  ],
+  "stages": ["The Half Moon, Putney", "The Jacaranda, Liverpool", "Artisan Tap, Stoke-on-Trent"]
+}

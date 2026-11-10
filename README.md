@@ -2,9 +2,16 @@
 
 Everything runs on Netlify: static pages, a small Netlify Function for the API, and Netlify Blobs for storage. There's no build step, nothing to sign up for besides Netlify and GitHub, and no external CDNs (the fonts are bundled in `assets/`).
 
+## The look
+A gig poster: League Gothic for headlines, Alfa Slab One for names (the band, venues), IBM Plex Sans for reading. Three colours do the work: violet, black and bone. Marigold is kept for tickets and live things only, so it always means "there's a show". All of it is set at the top of `assets/css/style.css`.
+
+Photos are tinted violet to match (the `duo` class). Take `duo` off the photo's box in the HTML if you'd rather show one in natural colour.
+
 ## Pages
 - `/` Jessie solo (home)
-- `/band/` Jessie & the Revolvers, originals first
+- `/band/` Jessie & The Revolvers: player, singles, proof, live dates, mailing list
+- `/epk/` press kit for promoters and press (copyable bio, highlights, releases)
+- `/links/` one page of links. Put this in the Instagram and Facebook bios instead of a Linktree, so every click lands on her own site
 - `/request/` what the QR code opens (also `/r`)
 - `/stage/` Jessie's private page, behind a password and hidden from Google
 - `/thanks/` shown after the booking or mailing list forms
@@ -26,9 +33,14 @@ None of this needs a redeploy or any code.
 
 ## Changing things yourself
 Edit any file on github.com (pencil icon), commit, and Netlify redeploys within about a minute. Each live deploy uses 15 of the free plan's 300 monthly credits.
-- Bios, line-up, social links: `index.html`, `band/index.html`
-- Releases and videos: `content/music.json` (the first release is the featured one; empty links are hidden)
-- Photos: replace the files in `assets/img/` and keep the same names
+- Bios and social links: `index.html`, `band/index.html`, `epk/index.html`
+- Releases and videos: `content/music.json`. Newest first; the first one is featured on every page. Empty links are hidden, and the Watch section appears once a video has a url
+- Awards, radio, press quotes, line-up, stages played: `content/band.json`. The line-up shows once two or more members are listed
+- Photos are optional and appear on their own when the file exists:
+  - `assets/img/jessie.jpg` home page hero (portrait, about 1200x1500)
+  - `assets/img/band.jpg` band page (landscape, about 1800x1200)
+  - `assets/img/releases/better-off.jpg`, `25.jpg`, `long-gone.jpg`, `self-obsessed.jpg` single artwork (square, 1000px+)
+  - `assets/img/share.jpg` and `share-band.jpg` are the link-preview images (1200x630); swap for photo versions when you have them
 - Booking email and tip link: `assets/js/config.js`
 - `content/gigs.json` and `content/setlist.json` are only the starting data. Once Jessie saves from the stage page, hers takes over.
 
@@ -42,3 +54,11 @@ Limits: each phone can send 8 requests per gig, with 600 per gig in total.
 
 ## Costs
 Free on Netlify's free plan at this size. Forms are unlimited. The API is tiny: a busy gig night uses a couple of credits. Domain is roughly £10 a year.
+
+## When a new single comes out
+1. Add it to the top of `content/music.json` (copy an existing entry; `spotify` is the part of the link after `open.spotify.com/`).
+2. Drop the artwork in `assets/img/releases/` named after its `slug`.
+3. Add it to the set list from the stage page. The home page, band page, press kit and links page all update from that one file.
+
+## Sources for the copy (check with Jessie before launch)
+Bio facts come from the band's Spotify profile, BabyStep Magazine's January 2026 feature and the Music Awards of Staffordshire & Cheshire results. The wording is a draft for her to approve.

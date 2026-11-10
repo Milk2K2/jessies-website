@@ -1,20 +1,44 @@
 {
-  "_help": "Jessie & the Revolvers originals. The first release is the featured one. Leave a link empty to hide that button. Artwork goes in assets/img.",
+  "_help": "Jessie & The Revolvers releases, newest first. The first one is the featured release everywhere on the site. 'spotify' is the bit after open.spotify.com/ and powers the on-page player. Leave a link empty to hide that button. Artwork is optional: save it as assets/img/releases/<slug>.jpg (square, 1000px or bigger) and it appears on its own.",
+  "artist": "artist/59uv0WRVPtHEDUnuRjHcPp",
   "releases": [
     {
-      "title": "Single Title",
+      "slug": "better-off",
+      "title": "Better Off",
       "type": "Single",
       "year": 2026,
-      "blurb": "One line about the song.",
-      "artwork": "assets/img/single.jpg",
-      "links": { "spotify": "", "apple": "", "youtube": "", "bandcamp": "" }
+      "blurb": "",
+      "spotify": "album/0PiARN7sASL1xWZ6K6Wqds",
+      "links": { "spotify": "https://open.spotify.com/album/0PiARN7sASL1xWZ6K6Wqds", "apple": "", "youtube": "", "bandcamp": "" }
     },
-    { "title": "Song Title", "type": "Single", "year": 2025, "links": { "spotify": "" } },
-    { "title": "Song Title", "type": "EP track", "year": 2025, "links": { "spotify": "" } }
+    {
+      "slug": "25",
+      "title": "25",
+      "type": "Single",
+      "year": 2026,
+      "blurb": "",
+      "spotify": "album/7I6poM466GkOaTRMVXJEXk",
+      "links": { "spotify": "https://open.spotify.com/album/7I6poM466GkOaTRMVXJEXk", "apple": "", "youtube": "", "bandcamp": "" }
+    },
+    {
+      "slug": "long-gone",
+      "title": "Long Gone",
+      "type": "Single",
+      "year": 2026,
+      "blurb": "Lyrics from Jessie's notes over a practice-room jam. Softer vocals up against heavy 90s guitars.",
+      "spotify": "album/3no9GHCjmHFUiWMRDuowXj",
+      "links": { "spotify": "https://open.spotify.com/album/3no9GHCjmHFUiWMRDuowXj", "apple": "", "youtube": "", "bandcamp": "" }
+    },
+    {
+      "slug": "self-obsessed",
+      "title": "Self Obsessed",
+      "type": "Debut single",
+      "year": 2025,
+      "blurb": "Where it started. Written in Jessie's bedroom, blunt and punchy on purpose.",
+      "spotify": "album/6XUlbZUwEyXSkMa1Uz089R",
+      "links": { "spotify": "https://open.spotify.com/album/6XUlbZUwEyXSkMa1Uz089R", "apple": "", "youtube": "", "bandcamp": "" }
+    }
   ],
-  "videos": [
-    { "title": "Valerie", "note": "Live", "url": "", "thumb": "" },
-    { "title": "Original Song", "note": "Official video", "url": "", "thumb": "" },
-    { "title": "Dreams", "note": "Live", "url": "", "thumb": "" }
-  ]
+  "_videos_help": "Add videos as { \"title\": \"Long Gone\", \"note\": \"Official video\", \"url\": \"https://youtu.be/...\", \"thumb\": \"assets/img/video-1.jpg\" }. The Watch section stays hidden until at least one has a url.",
+  "videos": []
 }
