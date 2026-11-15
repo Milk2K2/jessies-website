@@ -30,7 +30,7 @@ None of this needs a redeploy or any code.
 3. **Stage password**: Netlify > Site configuration > Environment variables > Add `STAGE_PASSWORD` with a password Jessie will remember. Then go to Deploys > Trigger deploy so the setting takes effect.
 4. **Forms**: Netlify > Forms > Enable form detection, then redeploy. Add an email notification for "booking" and "mailing-list" so enquiries land in your inbox.
 5. **Save credits**: Site configuration > Build & deploy > Branches and deploy contexts. Keep the production branch as `main`, and turn off deploy previews if you don't use them.
-6. **Domain**: Domain management > Add a domain. Then change `jessiejamesmusic.co.uk` in the HTML files, `assets/js/config.js`, `sitemap.xml` and `robots.txt`, and ask for a new QR card if the domain is different.
+6. **Domain**: Domain management > Add a domain. Then change `jessiejames.co.uk` in the HTML files, `assets/js/config.js`, `sitemap.xml` and `robots.txt`, and the QR card already points at jessiejames.co.uk/r.
 
 ## Changing things yourself
 Edit any file on github.com (pencil icon), commit, and Netlify redeploys within about a minute. Each live deploy uses 15 of the free plan's 300 monthly credits.

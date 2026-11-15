@@ -184,7 +184,7 @@ async function merch() {
       <div class="product-img">${m.image ? `<img src="${esc(root + m.image)}" alt="${esc(m.name)}" loading="lazy">` : ""}</div>
       <h3 class="product-name">${esc(m.name)}</h3>
       ${m.detail ? `<p class="muted">${esc(m.detail)}</p>` : ""}
-      <div class="product-buy"><span class="product-price">${esc(m.price || "")}</span>${ok ? `<a class="btn btn-primary" href="${esc(m.buyUrl)}" target="_blank" rel="noopener">Buy</a>` : `<span class="btn btn-ghost" aria-disabled="true">${m.soldOut ? "Sold out" : "Coming soon"}</span>`}</div>
+      <div class="product-buy"><span class="product-price">${esc(m.price || "")}</span>${ok ? `<a class="btn btn-primary" href="${esc(m.buyUrl)}" target="_blank" rel="noopener">${esc(m.buyLabel || "Buy")}</a>` : `<span class="btn btn-ghost" aria-disabled="true">${m.soldOut ? "Sold out" : "Coming soon"}</span>`}</div>
     </article>`;
   }).join("");
   const note = document.querySelector("[data-merch-note]");
