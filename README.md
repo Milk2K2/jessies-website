@@ -79,3 +79,6 @@ If she ends up with lots of products or needs stock counts, that's the point to 
 
 ## Photos
 Supplied by Jessie. Before launch, check each photographer is happy for them to be used and whether they want a credit (it can go in the footer).
+
+## Press kit document
+`assets/press/jessie-and-the-revolvers-epk-2026.pdf` is the downloadable press kit linked from `/epk/`. It's exported from the Word file (Jessie-and-The-Revolvers-EPK-2026.docx). When the Word file changes, save it as PDF with the same file name and replace it here. Note it contains the band's phone number.

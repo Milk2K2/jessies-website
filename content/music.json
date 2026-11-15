@@ -7,38 +7,65 @@
       "title": "Better Off",
       "type": "Single",
       "year": 2026,
-      "blurb": "",
+      "blurb": "Started with an acoustic guitar and a notebook of lyrics. About knowing something isn't right and wanting it anyway.",
       "spotify": "album/0PiARN7sASL1xWZ6K6Wqds",
-      "links": { "spotify": "https://open.spotify.com/album/0PiARN7sASL1xWZ6K6Wqds", "apple": "", "youtube": "", "bandcamp": "" }
+      "links": {
+        "spotify": "https://open.spotify.com/album/0PiARN7sASL1xWZ6K6Wqds",
+        "apple": "",
+        "youtube": "",
+        "bandcamp": ""
+      }
     },
     {
       "slug": "25",
       "title": "25",
       "type": "Single",
       "year": 2026,
-      "blurb": "",
+      "blurb": "About mental health and growing up feeling like you don't belong. Raw lyrics against upbeat guitars. Played on Radio X's breakfast show.",
       "spotify": "album/7I6poM466GkOaTRMVXJEXk",
-      "links": { "spotify": "https://open.spotify.com/album/7I6poM466GkOaTRMVXJEXk", "apple": "", "youtube": "", "bandcamp": "" }
+      "links": {
+        "spotify": "https://open.spotify.com/album/7I6poM466GkOaTRMVXJEXk",
+        "apple": "",
+        "youtube": "",
+        "bandcamp": ""
+      }
     },
     {
       "slug": "long-gone",
       "title": "Long Gone",
       "type": "Single",
       "year": 2026,
-      "blurb": "Lyrics from Jessie's notes over a practice-room jam. Softer vocals up against heavy 90s guitars.",
+      "blurb": "A bass line full of 90s angst, verses with a Fleetwood Mac lilt and a chorus that sticks for days. Out 23 January 2026.",
       "spotify": "album/3no9GHCjmHFUiWMRDuowXj",
-      "links": { "spotify": "https://open.spotify.com/album/3no9GHCjmHFUiWMRDuowXj", "apple": "", "youtube": "", "bandcamp": "" }
+      "links": {
+        "spotify": "https://open.spotify.com/album/3no9GHCjmHFUiWMRDuowXj",
+        "apple": "",
+        "youtube": "",
+        "bandcamp": ""
+      }
     },
     {
       "slug": "self-obsessed",
       "title": "Self Obsessed",
       "type": "Debut single",
       "year": 2025,
-      "blurb": "Where it started. Written in Jessie's bedroom, blunt and punchy on purpose.",
+      "blurb": "The debut. Bold vocals, gritty, jangly guitars and 60s swagger with a darker Western edge.",
       "spotify": "album/6XUlbZUwEyXSkMa1Uz089R",
-      "links": { "spotify": "https://open.spotify.com/album/6XUlbZUwEyXSkMa1Uz089R", "apple": "", "youtube": "", "bandcamp": "" }
+      "links": {
+        "spotify": "https://open.spotify.com/album/6XUlbZUwEyXSkMa1Uz089R",
+        "apple": "",
+        "youtube": "",
+        "bandcamp": ""
+      }
     }
   ],
   "_videos_help": "Add videos as { \"title\": \"Long Gone\", \"note\": \"Official video\", \"url\": \"https://youtu.be/...\", \"thumb\": \"assets/img/video-1.jpg\" }. The Watch section stays hidden until at least one has a url.",
-  "videos": []
+  "videos": [
+    {
+      "title": "Better Off",
+      "note": "Live at the Artisan Tap, 2026",
+      "url": "https://www.youtube.com/shorts/9eMehxsRU7w",
+      "thumb": ""
+    }
+  ]
 }
