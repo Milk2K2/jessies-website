@@ -142,7 +142,7 @@ async function music() {
     const vids = (data.videos || []).filter(v => v.url);
     if (!vids.length) section(videos).remove();
     else videos.innerHTML = vids.map(v => {
-      const bg = v.thumb ? ` style="background-image:url('${esc(root + v.thumb)}')"` : "";
+      const bg = v.thumb ? ` style="background-image:url('${esc(/^https:\/\//.test(v.thumb) ? v.thumb : root + v.thumb)}')"` : "";
       return `<a class="video" href="${esc(v.url)}" target="_blank" rel="noopener"${bg}><b>${esc(v.title)}</b><small>${esc(v.note || "")}</small></a>`;
     }).join("");
   }

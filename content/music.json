@@ -59,8 +59,26 @@
       }
     }
   ],
-  "_videos_help": "Add videos as { \"title\": \"Long Gone\", \"note\": \"Official video\", \"url\": \"https://youtu.be/...\", \"thumb\": \"assets/img/video-1.jpg\" }. The Watch section stays hidden until at least one has a url.",
+  "_videos_help": "Videos for the Watch section. thumb can be a file in assets/img/ or a full https:// image address (YouTube's is https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg). Leave thumb empty for a plain card.",
   "videos": [
+    {
+      "title": "Long Gone",
+      "note": "Propeller Sessions, University of Hertfordshire",
+      "url": "https://youtu.be/XqrJBDaOP2Y",
+      "thumb": "https://i.ytimg.com/vi/XqrJBDaOP2Y/hqdefault.jpg"
+    },
+    {
+      "title": "25",
+      "note": "Propeller Sessions, University of Hertfordshire",
+      "url": "https://youtu.be/hcp5_VuHfss",
+      "thumb": "https://i.ytimg.com/vi/hcp5_VuHfss/hqdefault.jpg"
+    },
+    {
+      "title": "Like You Do",
+      "note": "Propeller Sessions, University of Hertfordshire",
+      "url": "https://youtu.be/Rk7d0Xi8Xuw",
+      "thumb": "https://i.ytimg.com/vi/Rk7d0Xi8Xuw/hqdefault.jpg"
+    },
     {
       "title": "Better Off",
       "note": "Live at the Artisan Tap, 2026",
